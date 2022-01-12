@@ -1,0 +1,161 @@
+{
+	"name": "docusaurus-theme-frontmatter",
+	"description": "Docusaurus theme to expose front matter through a component hook",
+	"version": "1.0.0",
+	"author": {
+		"name": "roydukkey",
+		"email": "contact@changelog.me",
+		"url": "http://changelog.me"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/roydukkey/docusaurus-theme-frontmatter.git"
+	},
+	"homepage": "https://github.com/roydukkey/docusaurus-theme-frontmatter#readme",
+	"bugs": {
+		"url": "https://github.com/roydukkey/docusaurus-theme-frontmatter/issues"
+	},
+	"keywords": [
+		"docusaurus",
+		"docusaurus-plugin",
+		"front-matter",
+		"frontmatter",
+		"front",
+		"matter",
+		"gray-matter",
+		"graymatter",
+		"gray",
+		"matter"
+	],
+	"main": "./dist/index.js",
+	"types": "./dist/types.d.ts",
+	"engines": {
+		"node": ">=14",
+		"npm": "please-use-yarn",
+		"yarn": ">=1.22.0"
+	},
+	"devDependencies": {
+		"@docusaurus/module-type-aliases": "2.0.0-beta.14",
+		"@docusaurus/theme-classic": "2.0.0-beta.14",
+		"@roydukkey/eslint-config": "^1.0.10",
+		"@typescript-eslint/eslint-plugin": "^5.9.0",
+		"@typescript-eslint/parser": "^5.9.0",
+		"clean-package": "^2.1.1",
+		"cspell": "^5.15.1",
+		"eslint": "^8.6.0",
+		"eslint-plugin-tsdoc": "^0.2.14",
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0",
+		"tslib": "^2.3.1",
+		"typescript": "^4.5.4",
+		"webpack": "^5.65.0"
+	},
+	"peerDependencies": {
+		"@docusaurus/plugin-content-docs": "^2.0.0-beta",
+		"@docusaurus/plugin-content-pages": "^2.0.0-beta",
+		"@docusaurus/theme-classic": "^2.0.0-beta"
+	},
+	"peerDependenciesMeta": {
+		"@docusaurus/plugin-content-docs": {
+			"optional": true
+		},
+		"@docusaurus/plugin-content-pages": {
+			"optional": true
+		},
+		"@docusaurus/theme-classic": {
+			"optional": true
+		}
+	},
+	"scripts": {
+		"clean": "node -e \"fs.rmSync('./dist', { recursive: true, force: true })\"",
+		"lint": "yarn lint:spelling && yarn lint:es",
+		"lint:es": "eslint --ext js,jsx,ts,tsx ./",
+		"lint:spelling": "cspell --config './.vscode/cSpell.json' --no-progress '**/{.*/**/,.*/**/.,,.}*'",
+		"build": "yarn clean && yarn build:theme && yarn build:manifest && yarn build:types",
+		"build:theme": "tsc --project ./src/tsconfig.json",
+		"build:manifest": "tsc --project ./src/manifest/tsconfig.json",
+		"build:types": "node -e \"fs.copyFileSync('./src/types.d.ts', './dist/types.d.ts')\"",
+		"prepack": "yarn lint && yarn build && clean-package",
+		"new:pack": "yarn pack && clean-package restore",
+		"new:publish": "yarn publish && clean-package restore"
+	},
+	"clean-package": {
+		"extends": "clean-package/common",
+		"indent": "\t",
+		"remove": [
+			"scripts",
+			"engines.npm",
+			"engines.yarn"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"@roydukkey/eslint-config"
+		],
+		"ignorePatterns": [
+			"dist"
+		],
+		"overrides": [
+			{
+				"files": [
+					"*.{j,t}s?(x)"
+				],
+				"rules": {
+					"@typescript-eslint/naming-convention": [
+						"error",
+						{
+							"selector": "default",
+							"format": [
+								"camelCase"
+							],
+							"filter": {
+								"regex": "^.*?Context$",
+								"match": false
+							}
+						},
+						{
+							"selector": "default",
+							"modifiers": [
+								"unused"
+							],
+							"format": [
+								"camelCase"
+							],
+							"leadingUnderscore": "require"
+						},
+						{
+							"selector": [
+								"typeLike",
+								"enumMember"
+							],
+							"format": [
+								"PascalCase"
+							]
+						},
+						{
+							"selector": "property",
+							"modifiers": [
+								"private"
+							],
+							"format": [
+								"camelCase"
+							],
+							"leadingUnderscore": "require"
+						},
+						{
+							"selector": "interface",
+							"format": [
+								"PascalCase"
+							],
+							"custom": {
+								"regex": "^I[A-Z]",
+								"match": false
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}
