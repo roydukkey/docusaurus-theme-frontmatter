@@ -8,6 +8,9 @@ This package enhances the Docusaurus classic theme by exposing the [docs](https:
 
 Furthermore, this allows you to define and access ***custom*** front matter.
 
+[![Release Version](https://img.shields.io/npm/v/docusaurus-theme-frontmatter.svg)](https://www.npmjs.com/package/docusaurus-theme-frontmatter)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 ## Install
 
 ```sh
