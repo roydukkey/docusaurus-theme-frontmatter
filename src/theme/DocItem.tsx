@@ -3,11 +3,15 @@
 // ================================================================= //
 
 import { Context } from '@theme/useFrontMatter';
-import DocItem from '@theme-init/DocItem';
+import DocItemInit from '@theme-init/DocItem';
 import type { Props } from '@theme/DocItem';
 import React from 'react';
 
 
-export default (props: Props): JSX.Element => <Context.Provider value={props.content.frontMatter}>
-	<DocItem {...props} />
-</Context.Provider>;
+export default function DocItem (props: Props): JSX.Element {
+	return (
+		<Context.Provider value={props.content.frontMatter}>
+			<DocItemInit {...props} />
+		</Context.Provider>
+	);
+}

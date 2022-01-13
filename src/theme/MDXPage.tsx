@@ -3,11 +3,15 @@
 // ================================================================= //
 
 import { Context } from '@theme/useFrontMatter';
-import MDXPage from '@theme-init/MDXPage';
+import MDXPageInit from '@theme-init/MDXPage';
 import type { Props } from '@theme/MDXPage';
 import React from 'react';
 
 
-export default (props: Props): JSX.Element => <Context.Provider value={props.content.frontMatter}>
-	<MDXPage {...props} />
-</Context.Provider>;
+export default function MDXPage (props: Props): JSX.Element {
+	return (
+		<Context.Provider value={props.content.frontMatter}>
+			<MDXPageInit {...props} />
+		</Context.Provider>
+	);
+}
