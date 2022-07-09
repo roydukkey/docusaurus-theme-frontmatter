@@ -2,7 +2,7 @@
 
 This package enhances the Docusaurus classic theme by exposing the [docs](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-frontmatter), [blog](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#markdown-frontmatter), and [pages](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-pages) front matter to the following components and their children:
 
-* [BlogPostItem](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme/BlogPostItem)
+* [BlogPostPage](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme/BlogPostPage)
 * [DocItem](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme/DocItem)
 * [MDXPage](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme/MDXPage)
 
@@ -116,7 +116,7 @@ export default (props) => <Context.Provider value={props.content.frontMatter}>
 </Context.Provider>;
 ```
 
-### `FrontMatter`, `DocItemFrontMatter`, `BlogPostItemFrontMatter`, `MDXPageFrontMatter`
+### `FrontMatter`, `DocItemFrontMatter`, `BlogPostPageFrontMatter`, `MDXPageFrontMatter`
 
 These types are provided to assist in describing the values returned by the `useFrontMatter()` hook.
 

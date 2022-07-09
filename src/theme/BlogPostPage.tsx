@@ -2,16 +2,16 @@
 // Copyright (c) roydukkey. All rights reserved.                     //
 // ================================================================= //
 
-import BlogPostItemInit from '@theme-init/BlogPostItem';
+import BlogPostPageInit from '@theme-init/BlogPostPage';
 import { Context } from '@theme/useFrontMatter';
-import type { Props } from '@theme/BlogPostItem';
+import type { Props } from '@theme/BlogPostPage';
 import React from 'react';
 
 
-export default function BlogPostItem (props: Props): JSX.Element {
+export default function BlogPostPage (props: Props): JSX.Element {
 	return (
-		<Context.Provider value={props.frontMatter}>
-			<BlogPostItemInit {...props} />
+		<Context.Provider value={props.content.frontMatter}>
+			<BlogPostPageInit {...props} />
 		</Context.Provider>
 	);
 }

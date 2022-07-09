@@ -6,7 +6,7 @@
 
 declare module '@theme/useFrontMatter' {
 
-	import type { Props as BlogPostItemProps } from '@theme/BlogPostItem';
+	import type { Props as BlogPostPageProps } from '@theme/BlogPostPage';
 	import type { Context } from 'react';
 	import type { Props as DocItemProps } from '@theme/DocItem';
 	import type { Props as MDXPageProps } from '@theme/MDXPage';
@@ -28,7 +28,7 @@ declare module '@theme/useFrontMatter' {
 	}
 
 	export type DocItemFrontMatter = DocItemProps['content']['frontMatter'];
-	export type BlogPostItemFrontMatter = BlogPostItemProps['frontMatter'];
+	export type BlogPostPageFrontMatter = BlogPostPageProps['content']['frontMatter'];
 	export type MDXPageFrontMatter = MDXPageProps['content']['frontMatter'];
 
 }
