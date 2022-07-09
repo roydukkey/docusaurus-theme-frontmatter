@@ -1,9 +1,9 @@
 # Changelog
 
 <!-- The order of list items should be: Critical/Fixes, New, Update, Remove, Underpinnings -->
-<!-- ## [UNRELEASED](https://github.com/roydukkey/docusaurus-theme-frontmatter/compare/v1.2.0...master) -->
+<!-- ## [UNRELEASED](https://github.com/roydukkey/docusaurus-theme-frontmatter/compare/v1.3.0...master) -->
 
-## [UNRELEASED](https://github.com/roydukkey/docusaurus-theme-frontmatter/compare/v1.2.0...master)
+## [1.3.0](https://github.com/roydukkey/docusaurus-theme-frontmatter/compare/v1.2.0...1.3.0)
 
 * Breaking: renamed `BlogPostItemFrontMatter` to `BlogPostPageFrontMatter`
 * Fix typing changes for [docusaurus v2.0.0-beta.22](https://github.com/facebook/docusaurus/releases/tag/v2.0.0-beta.22)

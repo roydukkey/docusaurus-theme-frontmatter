@@ -1,6 +1,6 @@
 # docusaurus-theme-frontmatter
 
-This package enhances the Docusaurus classic theme by exposing the [docs](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-frontmatter), [blog](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#markdown-frontmatter), and [pages](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-pages) front matter to the following components and their children:
+This package enhances the Docusaurus classic theme by exposing the [docs](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter), [blog](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#markdown-front-matter), and [pages](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-pages) front matter to the following components and their children:
 
 * [BlogPostPage](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme/BlogPostPage)
 * [DocItem](https://github.com/facebook/docusaurus/tree/main/packages/docusaurus-theme-classic/src/theme/DocItem)
