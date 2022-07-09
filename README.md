@@ -129,3 +129,13 @@ const MyComponent = () => {
   return (<... />);
 }
 ```
+
+## Project Longevity
+
+This project was originally created to provide a useful feature that was lacking in Docusaurus v2. Since the release of this plugin, the Docusaurus team has began a [plan to expose FrontMatter](https://github.com/facebook/docusaurus/issues/6885) and other data through hooks. So long their resulting work provides access to **custom** front matter, this project is likely to deprecate. However until that day comes, I will do my best to keep this project up-to-date with upstream changes.
+
+Here are some issues to review if you want to see where all this is headed:
+
+* [RFC: allow routes to declare a React context](https://github.com/facebook/docusaurus/issues/6885)
+* [refactor(docs,theme): split DocItem comp, useDoc hook](https://github.com/facebook/docusaurus/pull/7644)
+* [refactor(theme): split BlogPostItem into smaller theme subcomponents](https://github.com/facebook/docusaurus/pull/7716)
